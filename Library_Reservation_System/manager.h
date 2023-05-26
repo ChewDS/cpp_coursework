@@ -9,33 +9,33 @@
 #include <algorithm>
 #include "library.h"
 using namespace std;
-//¹ÜÀíÔ±Àà
+//ç®¡ç†å‘˜ç±»
 class Manager :public Identity
 {
 public:
-	//Ä¬ÈÏ¹¹Ôì
+	//é»˜è®¤æ„é€ 
 	Manager();
-	//ÓĞ²Î¹¹Ôì
+	//æœ‰å‚æ„é€ 
 	Manager(string name, string pwd);
-	//Ñ¡Ôñ²Ëµ¥
+	//é€‰æ‹©èœå•
 	virtual void openMenu();
-	//Ìí¼ÓÕËºÅ
+	//æ·»åŠ è´¦å·
 	void addPerson();
-	//²é¿´ÕËºÅ
+	//æŸ¥çœ‹è´¦å·
 	void showPerson();
-	//²é¿´Í¼Êé¹İĞÅÏ¢
+	//æŸ¥çœ‹å›¾ä¹¦é¦†ä¿¡æ¯
 	void showLibrary();
-	//Çå¿ÕÔ¤Ô¼¼ÇÂ¼
+	//æ¸…ç©ºé¢„çº¦è®°å½•
 	void cleanFile();
-	//³õÊ¼»¯ÈİÆ÷
+	//åˆå§‹åŒ–å®¹å™¨
 	void initVector();
-	//¼ì²âÖØ¸´ ²ÎÊı1 Ñ§ºÅ/Ö°¹¤ºÅ ²ÎÊı2 Ñ§Éú/ÀÏÊ¦ÀàĞÍ
+	//æ£€æµ‹é‡å¤ å‚æ•°1 å­¦å·/èŒå·¥å· å‚æ•°2 å­¦ç”Ÿ/è€å¸ˆç±»å‹
 	bool checkRepeat(int id, int type);
-	//Ñ§ÉúÈİÆ÷
+	//å­¦ç”Ÿå®¹å™¨
 	vector<Student>vStu;
-	//ÀÏÊ¦ÈİÆ÷
+	//è€å¸ˆå®¹å™¨
 	vector<Teacher>vTea;
-	//Í¼Êé¹İÈİÆ÷
+	//å›¾ä¹¦é¦†å®¹å™¨
 	vector<Library>vLib;
 };
 
