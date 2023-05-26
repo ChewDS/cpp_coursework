@@ -10,17 +10,17 @@ using namespace std;
 class OrderFile
 {
 public:
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	OrderFile();
 
 
-	//¸üĞÂÔ¤Ô¼¼ÇÂ¼
+	//æ›´æ–°é¢„çº¦è®°å½•
 	void updateOrder();
 
-	//¼ÇÂ¼Ô¤Ô¼ÌõÊı
+	//è®°å½•é¢„çº¦æ¡æ•°
 	int m_Size;
 
-	//¼ÇÂ¼ËùÓĞÔ¤Ô¼ĞÅÏ¢µÄÈİÆ÷ key¼ÇÂ¼Ô¤Ô¼ÌõÊı  value¼ÇÂ¼¾ßÌå¼üÖµ¶ÔĞÅÏ¢
+	//è®°å½•æ‰€æœ‰é¢„çº¦ä¿¡æ¯çš„å®¹å™¨ keyè®°å½•é¢„çº¦æ¡æ•°  valueè®°å½•å…·ä½“é”®å€¼å¯¹ä¿¡æ¯
 	map<int, map<string, string>>m_orderData;
 
 };
