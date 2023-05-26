@@ -5,7 +5,7 @@ using namespace std;
 class Library
 {
 public:
-	int m_LibId;//Í¼Êé¹İidºÅ
+	int m_LibId;//ÃÂ¼ÃŠÃ©Â¹ÃidÂºÃ…
 
-	int m_MaxNum;//Í¼Êé¹İÈİÁ¿
+	int m_MaxNum;//ÃÂ¼ÃŠÃ©Â¹ÃÃˆÃÃÂ¿
 };
