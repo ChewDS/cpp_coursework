@@ -1,14 +1,14 @@
-#pragma once//·ÀÖ¹Í·ÎÄ¼şÖØ¸´°üº¬
+#pragma once//é˜²æ­¢å¤´æ–‡ä»¶é‡å¤åŒ…å«
 #include<iostream>
 using namespace std;
 
 class Identity
 {
 public:
-	//²Ù×÷²Ëµ¥ ´¿Ğéº¯Êı
+	//æ“ä½œèœå• çº¯è™šå‡½æ•°
 	virtual void openMenu() = 0;
-	//ÓÃ»§Ãû
+	//ç”¨æˆ·å
 	string m_Name;
-	//ÃÜÂë
+	//å¯†ç 
 	string m_Pwd;
 };
