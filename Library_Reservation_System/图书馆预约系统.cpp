@@ -10,41 +10,41 @@
 #include<cstdlib>
 using namespace std;
 
-//½øÈëÑ§Éú×Ó²Ëµ¥Ò³Ãæ
+//è¿›å…¥å­¦ç”Ÿå­èœå•é¡µé¢
 void studentMenu(Identity*& student)
 {
 	while (true)
 	{
-		//µ÷ÓÃ¹ÜÀíÔ±×Ó²Ëµ¥
+		//è°ƒç”¨ç®¡ç†å‘˜å­èœå•
 		student->openMenu();
 
-		//½«¸¸ÀàÖ¸Õë×ª»¯Îª×ÓÀàÖ¸Õë£¬¿ÉÒÔµ÷ÓÃ×ÓÀàÀïÆäËûÌØÓĞµÄ½Ó¿Ú
+		//å°†çˆ¶ç±»æŒ‡é’ˆè½¬åŒ–ä¸ºå­ç±»æŒ‡é’ˆï¼Œå¯ä»¥è°ƒç”¨å­ç±»é‡Œå…¶ä»–ç‰¹æœ‰çš„æ¥å£
 		Student* stu = (Student*)student;
 
 		int select = 0;
-		//½ÓÊÜÓÃ»§Ñ¡Ôñ
+		//æ¥å—ç”¨æˆ·é€‰æ‹©
 		cin >> select;
 
-		if (select == 1)//ÉêÇëÔ¤Ô¼
+		if (select == 1)//ç”³è¯·é¢„çº¦
 		{
 			stu->applyOrder();
 		}
-		else if (select == 2)//²é¿´×ÔÉíÔ¤Ô¼
+		else if (select == 2)//æŸ¥çœ‹è‡ªèº«é¢„çº¦
 		{
 			stu->showMyOrder();
 		}
-		else if (select == 3)//²é¿´ËùÓĞÔ¤Ô¼
+		else if (select == 3)//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
 		{
 			stu->showAllOrder();
 		}
-		else if (select == 4)//È¡ÏûÔ¤Ô¼
+		else if (select == 4)//å–æ¶ˆé¢„çº¦
 		{
 			stu->cancelOrder();
 		}
-		else//×¢ÏúµÇÂ¼
+		else//æ³¨é”€ç™»å½•
 		{
 			delete student;
-			cout << "×¢Ïú³É¹¦£¡" << endl;
+			cout << "æ³¨é”€æˆåŠŸï¼" << endl;
 			system("pause");
 			system("cls");
 			return;
@@ -52,35 +52,35 @@ void studentMenu(Identity*& student)
 	}
 }
 
-//½øÈë½ÌÊ¦×Ó²Ëµ¥Ò³Ãæ
+//è¿›å…¥æ•™å¸ˆå­èœå•é¡µé¢
 void teacherMenu(Identity*& teacher)
 {
 	while (true)
 	{
-		//µ÷ÓÃ½ÌÊ¦×Ó²Ëµ¥
+		//è°ƒç”¨æ•™å¸ˆå­èœå•
 		teacher->openMenu();
 
-		//½«¸¸ÀàÖ¸Õë×ª»¯Îª×ÓÀàÖ¸Õë£¬¿ÉÒÔµ÷ÓÃ×ÓÀàÀïÆäËûÌØÓĞµÄ½Ó¿Ú
+		//å°†çˆ¶ç±»æŒ‡é’ˆè½¬åŒ–ä¸ºå­ç±»æŒ‡é’ˆï¼Œå¯ä»¥è°ƒç”¨å­ç±»é‡Œå…¶ä»–ç‰¹æœ‰çš„æ¥å£
 		Teacher* tea = (Teacher*)teacher;
 
 		int select = 0;
-		//½ÓÊÜÓÃ»§Ñ¡Ôñ
+		//æ¥å—ç”¨æˆ·é€‰æ‹©
 		cin >> select;
 
 		if (select == 1)
 		{
-			cout << "ÏÔÊ¾ËùÓĞÔ¤Ô¼£º" << endl;
+			cout << "æ˜¾ç¤ºæ‰€æœ‰é¢„çº¦ï¼š" << endl;
 			tea->showOrder();
 		}
 		else if (select == 2)
 		{
-			cout << "ÉóºËÔ¤Ô¼£º" << endl;
+			cout << "å®¡æ ¸é¢„çº¦ï¼š" << endl;
 			tea->validOrder();
 		}
 		else
 		{
-			delete teacher;//Ïú»Ù¶ÑÇø¶ÔÏó
-			cout << "×¢Ïú³É¹¦" << endl;
+			delete teacher;//é”€æ¯å †åŒºå¯¹è±¡
+			cout << "æ³¨é”€æˆåŠŸ" << endl;
 			system("pause");
 			system("cls");
 			return;
@@ -90,45 +90,45 @@ void teacherMenu(Identity*& teacher)
 
 
 
-//½øÈë¹ÜÀíÔ±×Ó²Ëµ¥Ò³Ãæ
+//è¿›å…¥ç®¡ç†å‘˜å­èœå•é¡µé¢
 void managerMenu(Identity*& manager)
 {
 	while (true)
 	{
-		//µ÷ÓÃ¹ÜÀíÔ±×Ó²Ëµ¥
+		//è°ƒç”¨ç®¡ç†å‘˜å­èœå•
 		manager->openMenu();
 
-		//½«¸¸ÀàÖ¸Õë×ª»¯Îª×ÓÀàÖ¸Õë£¬¿ÉÒÔµ÷ÓÃ×ÓÀàÀïÆäËûÌØÓĞµÄ½Ó¿Ú
+		//å°†çˆ¶ç±»æŒ‡é’ˆè½¬åŒ–ä¸ºå­ç±»æŒ‡é’ˆï¼Œå¯ä»¥è°ƒç”¨å­ç±»é‡Œå…¶ä»–ç‰¹æœ‰çš„æ¥å£
 		Manager* man = (Manager*)manager;
 
 		int select = 0;
-		//½ÓÊÜÓÃ»§Ñ¡Ôñ
+		//æ¥å—ç”¨æˆ·é€‰æ‹©
 		cin >> select;
 
-		if (select == 1)//Ìí¼ÓÕËºÅ
+		if (select == 1)//æ·»åŠ è´¦å·
 		{
-			cout << "Ìí¼ÓÕËºÅ" << endl;
+			cout << "æ·»åŠ è´¦å·" << endl;
 			man->addPerson();
 		}
-		else if (select == 2)//²é¿´ÕËºÅ
+		else if (select == 2)//æŸ¥çœ‹è´¦å·
 		{
-			cout << "²é¿´ÕËºÅ" << endl;
+			cout << "æŸ¥çœ‹è´¦å·" << endl;
 			man->showPerson();
 		}
-		else if (select == 3)//²é¿´Í¼Êé¹İ
+		else if (select == 3)//æŸ¥çœ‹å›¾ä¹¦é¦†
 		{
-			cout << "²é¿´Í¼Êé¹İ" << endl;
+			cout << "æŸ¥çœ‹å›¾ä¹¦é¦†" << endl;
 			man->showLibrary();
 		}
-		//Çå¿ÕÔ¤Ô¼
+		//æ¸…ç©ºé¢„çº¦
 		else if (select == 4)
 		{
 			man->cleanFile();
 		}
 		else
 		{
-			delete manager;//Ïú»Ù¶ÑÇø¶ÔÏó
-			cout << "×¢Ïú³É¹¦" << endl;
+			delete manager;//é”€æ¯å †åŒºå¯¹è±¡
+			cout << "æ³¨é”€æˆåŠŸ" << endl;
 			system("pause");
 			system("cls");
 			return;
@@ -136,63 +136,63 @@ void managerMenu(Identity*& manager)
 	}
 }
 
-//µÇÂ¼¹¦ÄÜ ²ÎÊı1 ²Ù×÷ÎÄ¼şµÄÃû³Æ ²ÎÊı2 ²Ù×÷Éí·İÀàĞÍ
+//ç™»å½•åŠŸèƒ½ å‚æ•°1 æ“ä½œæ–‡ä»¶çš„åç§° å‚æ•°2 æ“ä½œèº«ä»½ç±»å‹
 void LoginIn(string fileName, int type)
 {
-	//¸¸ÀàÖ¸Õë ÓÃÓÚÖ¸Ïò×ÓÀà¶ÔÏó
+	//çˆ¶ç±»æŒ‡é’ˆ ç”¨äºæŒ‡å‘å­ç±»å¯¹è±¡
 	Identity* person = NULL;
 
-	//¶ÁÎÄ¼ş
+	//è¯»æ–‡ä»¶
 	ifstream ifs;
 	ifs.open(fileName, ios::in);
 
-	//ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+	//åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ" << endl;
-		ifs.close();//¹Ø±ÕÎÄ¼ş
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨" << endl;
+		ifs.close();//å…³é—­æ–‡ä»¶
 		return;
 	}
 
-	//×¼±¸½ÓÊÜÓÃ»§ĞÅÏ¢
+	//å‡†å¤‡æ¥å—ç”¨æˆ·ä¿¡æ¯
 	int id = 0;
 	string name;
 	string pwd;
 
-	//ÓÃ»§Éí·İÎªÑ§Éú
+	//ç”¨æˆ·èº«ä»½ä¸ºå­¦ç”Ÿ
 	if (type == 1)
 	{
-		//Ñ§ÉúÉí·İÑéÖ¤
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄid
+		//å­¦ç”Ÿèº«ä»½éªŒè¯
+		//ä»æ–‡ä»¶ä¸­è·å–çš„id
 		int fid;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄĞÕÃû
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å§“å
 		string fName;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄÃÜÂë
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å¯†ç 
 		string fpwd;
 		while (ifs >> fid && ifs >> fName && ifs >> fpwd)
 		{
 			while (true)
 			{
-				cout << "ÇëÊäÈëÄãµÄÑ§ºÅ£º" << endl;
+				cout << "è¯·è¾“å…¥ä½ çš„å­¦å·ï¼š" << endl;
 				cin >> id;
-				cout << "ÇëÊäÈëÓÃ»§Ãû£º" << endl;
+				cout << "è¯·è¾“å…¥ç”¨æˆ·åï¼š" << endl;
 				cin >> name;
-				cout << "ÇëÊäÈëÃÜÂë£º" << endl;
+				cout << "è¯·è¾“å…¥å¯†ç ï¼š" << endl;
 				cin >> pwd;
 				while (true)
 				{
-					//ÉèÖÃËæ»úÊıÖÖ×Ó
+					//è®¾ç½®éšæœºæ•°ç§å­
 					srand(int(time(NULL)));
 					int a = rand() % (10000 - 1000) + 1000;
 					cout << a << endl;
-					cout << "ÇëÊäÈëÆÁÄ»ÉÏ³öÏÖµÄÑéÖ¤Âë" << endl;
+					cout << "è¯·è¾“å…¥å±å¹•ä¸Šå‡ºç°çš„éªŒè¯ç " << endl;
 					int b = 0;
 					cin >> b;
-					//ÓëÓÃ»§ÊäÈëĞÅÏ¢×ö¶Ô±È
-					//ÑéÖ¤ÂëÓĞÎó
+					//ä¸ç”¨æˆ·è¾“å…¥ä¿¡æ¯åšå¯¹æ¯”
+					//éªŒè¯ç æœ‰è¯¯
 					if (a != b)
 					{
-						cout << "ÄúÊäÈëµÄÑéÖ¤ÂëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+						cout << "æ‚¨è¾“å…¥çš„éªŒè¯ç æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 					}
 					else if (a == b)
 					{
@@ -201,27 +201,27 @@ void LoginIn(string fileName, int type)
 				}
 				if (fid == id && fName == name && fpwd == pwd)
 				{
-					cout << "Ñ§ÉúÑéÖ¤µÇÂ¼³É¹¦£¡" << endl;
+					cout << "å­¦ç”ŸéªŒè¯ç™»å½•æˆåŠŸï¼" << endl;
 					system("pause");
 					system("cls");
 					person = new Student(id, name, pwd);
-					//½øÈëÑ§ÉúÒ³Ãæ×Ó²Ëµ¥
+					//è¿›å…¥å­¦ç”Ÿé¡µé¢å­èœå•
 					studentMenu(person);
 					return;
 				}
-				//ÑéÖ¤ÂëÎŞÎó£¬ÑéÖ¤Ñ§ºÅ
+				//éªŒè¯ç æ— è¯¯ï¼ŒéªŒè¯å­¦å·
 				else if (fid != id)
 				{
-					cout << "ÄúµÄÑ§ºÅÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+					cout << "æ‚¨çš„å­¦å·è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 					system("pause");
 					system("cls");
 				}
-				//Ñ§ºÅÎŞÎó£¬ÔÙ½øĞĞÓÃ»§ÃûºÍÃÜÂëÑéÖ¤
+				//å­¦å·æ— è¯¯ï¼Œå†è¿›è¡Œç”¨æˆ·åå’Œå¯†ç éªŒè¯
 				else if (fid == id)
 				{
 					if (fName != name || fpwd != pwd)
 					{
-						cout << "ÄúµÄÓÃ»§Ãû»òÃÜÂëÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+						cout << "æ‚¨çš„ç”¨æˆ·åæˆ–å¯†ç è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 							system("pause");
 							system("cls");
 					}
@@ -230,41 +230,41 @@ void LoginIn(string fileName, int type)
 		}
 		if (!(ifs >> fid && ifs >> fName && ifs >> fpwd))
 		{
-			cout << "ÔİÎŞÑ§ÉúÓÃ»§" << endl;
+			cout << "æš‚æ— å­¦ç”Ÿç”¨æˆ·" << endl;
 		}
 	}
 	else if (type == 2)
 	{
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄid
+		//ä»æ–‡ä»¶ä¸­è·å–çš„id
 		int fid;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄĞÕÃû
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å§“å
 		string fName;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄÃÜÂë
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å¯†ç 
 		string fpwd;
 		while (ifs >> fid && ifs >> fName && ifs >> fpwd)
 		{
 			while (true)
 			{
-				cout << "ÇëÊäÈëÄãµÄÖ°¹¤±àºÅ£º" << endl;
+				cout << "è¯·è¾“å…¥ä½ çš„èŒå·¥ç¼–å·ï¼š" << endl;
 				cin >> id;
-				cout << "ÇëÊäÈëÓÃ»§Ãû£º" << endl;
+				cout << "è¯·è¾“å…¥ç”¨æˆ·åï¼š" << endl;
 				cin >> name;
-				cout << "ÇëÊäÈëÃÜÂë£º" << endl;
+				cout << "è¯·è¾“å…¥å¯†ç ï¼š" << endl;
 				cin >> pwd;
 				while (true)
 				{
-					//ÉèÖÃËæ»úÊıÖÖ×Ó
+					//è®¾ç½®éšæœºæ•°ç§å­
 					srand(int(time(NULL)));
 					int a = rand() % (10000 - 1000) + 1000;
 					cout << a << endl;
-					cout << "ÇëÊäÈëÆÁÄ»ÉÏ³öÏÖµÄÑéÖ¤Âë" << endl;
+					cout << "è¯·è¾“å…¥å±å¹•ä¸Šå‡ºç°çš„éªŒè¯ç " << endl;
 					int b = 0;
 					cin >> b;
-					//ÓëÓÃ»§ÊäÈëĞÅÏ¢×ö¶Ô±È
-					//ÑéÖ¤ÂëÓĞÎó
+					//ä¸ç”¨æˆ·è¾“å…¥ä¿¡æ¯åšå¯¹æ¯”
+					//éªŒè¯ç æœ‰è¯¯
 					if (a != b)
 					{
-						cout << "ÄúÊäÈëµÄÑéÖ¤ÂëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+						cout << "æ‚¨è¾“å…¥çš„éªŒè¯ç æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 						system("pause");
 						system("cls");
 					}
@@ -275,27 +275,27 @@ void LoginIn(string fileName, int type)
 				}
 				if (fid == id && fName == name && fpwd == pwd)
 				{
-					cout << "ÀÏÊ¦ÑéÖ¤µÇÂ¼³É¹¦£¡" << endl;
+					cout << "è€å¸ˆéªŒè¯ç™»å½•æˆåŠŸï¼" << endl;
 					system("pause");
 					system("cls");
 					person = new Teacher(id, name, pwd);
-					//½øÈëÀÏÊ¦Ò³Ãæ×Ó²Ëµ¥
+					//è¿›å…¥è€å¸ˆé¡µé¢å­èœå•
 					teacherMenu(person);
 					return;
 				}
-				//ÑéÖ¤ÂëÎŞÎó£¬ÑéÖ¤Ö°¹¤±àºÅ
+				//éªŒè¯ç æ— è¯¯ï¼ŒéªŒè¯èŒå·¥ç¼–å·
 				else if (fid != id)
 				{
-					cout << "ÄúµÄÖ°¹¤±àºÅÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+					cout << "æ‚¨çš„èŒå·¥ç¼–å·è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 					system("pause");
 					system("cls");
 				}
-				//Ö°¹¤±àºÅÎŞÎó£¬ÔÙ½øĞĞÓÃ»§ÃûºÍÃÜÂëÑéÖ¤
+				//èŒå·¥ç¼–å·æ— è¯¯ï¼Œå†è¿›è¡Œç”¨æˆ·åå’Œå¯†ç éªŒè¯
 				else if (fid == id)
 				{
 					if (fName != name || fpwd != pwd)
 					{
-						cout << "ÄúµÄÓÃ»§Ãû»òÃÜÂëÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+						cout << "æ‚¨çš„ç”¨æˆ·åæˆ–å¯†ç è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 						system("pause");
 						system("cls");
 					}
@@ -304,39 +304,39 @@ void LoginIn(string fileName, int type)
 		}
 		if (!(ifs >> fid && ifs >> fName && ifs >> fpwd))
 		{
-			cout << "ÔİÎŞÀÏÊ¦ÓÃ»§" << endl;
+			cout << "æš‚æ— è€å¸ˆç”¨æˆ·" << endl;
 		}
 	}
 	else if (type == 3)
 	{
-		//¹ÜÀíÔ±Éí·İÑéÖ¤
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄĞÕÃû
+		//ç®¡ç†å‘˜èº«ä»½éªŒè¯
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å§“å
 		string fName;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡µÄÃÜÂë
+		//ä»æ–‡ä»¶ä¸­è·å–çš„å¯†ç 
 		string fpwd;
 
 		while (ifs >> fName && ifs >> fpwd)
 		{
 			while (true)
 			{
-				cout << "ÇëÊäÈëÓÃ»§Ãû£º" << endl;
+				cout << "è¯·è¾“å…¥ç”¨æˆ·åï¼š" << endl;
 				cin >> name;
-				cout << "ÇëÊäÈëÃÜÂë£º" << endl;
+				cout << "è¯·è¾“å…¥å¯†ç ï¼š" << endl;
 				cin >> pwd;
 				while (true)
 				{
-					//ÉèÖÃËæ»úÊıÖÖ×Ó
+					//è®¾ç½®éšæœºæ•°ç§å­
 					srand(int(time(NULL)));
 					int a = rand() % (10000 - 1000) + 1000;
 					cout << a << endl;
-					cout << "ÇëÊäÈëÆÁÄ»ÉÏ³öÏÖµÄÑéÖ¤Âë" << endl;
+					cout << "è¯·è¾“å…¥å±å¹•ä¸Šå‡ºç°çš„éªŒè¯ç " << endl;
 					int b = 0;
 					cin >> b;
-					//ÓëÓÃ»§ÊäÈëĞÅÏ¢×ö¶Ô±È
-					//ÑéÖ¤ÂëÓĞÎó
+					//ä¸ç”¨æˆ·è¾“å…¥ä¿¡æ¯åšå¯¹æ¯”
+					//éªŒè¯ç æœ‰è¯¯
 					if (a != b)
 					{
-						cout << "ÄúÊäÈëµÄÑéÖ¤ÂëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+						cout << "æ‚¨è¾“å…¥çš„éªŒè¯ç æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 						system("pause");
 						system("cls");
 					}
@@ -345,22 +345,22 @@ void LoginIn(string fileName, int type)
 						break;
 					}
 				}
-				//ÓëÓÃ»§ÊäÈëĞÅÏ¢×ö¶Ô±È
+				//ä¸ç”¨æˆ·è¾“å…¥ä¿¡æ¯åšå¯¹æ¯”
 				if (fName == name && fpwd == pwd)
 				{
-					cout << "¹ÜÀíÔ±ÑéÖ¤µÇÂ¼³É¹¦£¡" << endl;
+					cout << "ç®¡ç†å‘˜éªŒè¯ç™»å½•æˆåŠŸï¼" << endl;
 					system("pause");
 					system("cls");
-					//´´½¨¹ÜÀíÔ±¶ÔÏó
+					//åˆ›å»ºç®¡ç†å‘˜å¯¹è±¡
 					person = new Manager(name, pwd);
-					//½øÈë¹ÜÀíÔ±Ò³Ãæ×Ó²Ëµ¥
+					//è¿›å…¥ç®¡ç†å‘˜é¡µé¢å­èœå•
 					managerMenu(person);
 					return;
 				}
-				//ÑéÖ¤ÂëÎŞÎó£¬½øĞĞÓÃ»§ÃûºÍÃÜÂëÑéÖ¤
+				//éªŒè¯ç æ— è¯¯ï¼Œè¿›è¡Œç”¨æˆ·åå’Œå¯†ç éªŒè¯
 				if (fName != name || fpwd != pwd)
 				{
-					cout << "ÄúµÄÓÃ»§Ãû»òÃÜÂëÊäÈëÓĞÎó,ÇëÖØĞÂÊäÈë" << endl;
+					cout << "æ‚¨çš„ç”¨æˆ·åæˆ–å¯†ç è¾“å…¥æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥" << endl;
 					system("pause");
 					system("cls");
 				}
@@ -377,41 +377,41 @@ int main() {
 	int select = 0;
 	while (true)
 	{
-		cout << "=================  »¶Ó­À´µ½ChewµÄÍ¼Êé¹İÔ¤Ô¼ÏµÍ³  ================" << endl;
-		cout << endl << "ÇëÊäÈëÄúµÄÉí·İ" << endl;
+		cout << "=================  æ¬¢è¿æ¥åˆ°Chewçš„å›¾ä¹¦é¦†é¢„çº¦ç³»ç»Ÿ  ================" << endl;
+		cout << endl << "è¯·è¾“å…¥æ‚¨çš„èº«ä»½" << endl;
 		cout << "\t\t -------------------------------\n";
 		cout << "\t\t|                               |\n";
-		cout << "\t\t|          1.Ñ§Éú´ú±í           |\n";
+		cout << "\t\t|          1.å­¦ç”Ÿä»£è¡¨           |\n";
 		cout << "\t\t|                               |\n";
-		cout << "\t\t|          2.ÀÏ    Ê¦           |\n";
+		cout << "\t\t|          2.è€    å¸ˆ           |\n";
 		cout << "\t\t|                               |\n";
-		cout << "\t\t|          3.¹Ü Àí Ô±           |\n";
+		cout << "\t\t|          3.ç®¡ ç† å‘˜           |\n";
 		cout << "\t\t|                               |\n";
-		cout << "\t\t|          0.ÍË    ³ö           |\n";
+		cout << "\t\t|          0.é€€    å‡º           |\n";
 		cout << "\t\t|                               |\n";
 		cout << "\t\t -------------------------------\n";
-		cout << "ÊäÈëÄúµÄÑ¡Ôñ: ";
+		cout << "è¾“å…¥æ‚¨çš„é€‰æ‹©: ";
 
-		cin >> select;//½ÓÊÜÓÃ»§Ñ¡Ôñ
+		cin >> select;//æ¥å—ç”¨æˆ·é€‰æ‹©
 
-		switch (select)//¸ù¾İÓÃ»§Ñ¡ÔñÊµÏÖ²»Í¬µÄ½Ó¿Ú
+		switch (select)//æ ¹æ®ç”¨æˆ·é€‰æ‹©å®ç°ä¸åŒçš„æ¥å£
 		{
-		case 1://Ñ§Éú
+		case 1://å­¦ç”Ÿ
 			LoginIn(STUDENT_FILE, 1);
 			break;
-		case 2://ÀÏÊ¦
+		case 2://è€å¸ˆ
 			LoginIn(TEACHER_FILE, 2);
 			break;
-		case 3://¹ÜÀíÔ±
+		case 3://ç®¡ç†å‘˜
 			LoginIn(ADMIN_FILE, 3);
 			break;
-		case 0://ÍË³ö
-			cout << "»¶Ó­ÏÂ´ÎÊ¹ÓÃ£¡" << endl;
+		case 0://é€€å‡º
+			cout << "æ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨ï¼" << endl;
 			system("pause");
 			return 0;
 			break;
 		default:
-			cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÑ¡Ôñ£¡" << endl;
+			cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°é€‰æ‹©ï¼" << endl;
 			system("pause");
 			system("cls");
 			break;
