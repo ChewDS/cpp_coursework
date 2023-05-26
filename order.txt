@@ -1,0 +1,1 @@
+date:1 interval:2 stuId:1400 stuName:Chew roomId: status:2
