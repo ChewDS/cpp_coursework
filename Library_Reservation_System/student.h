@@ -11,23 +11,23 @@ using namespace std;
 class Student :public Identity
 {
 public:
-	//Ä¬ÈÏ¹¹Ôì
+	//é»˜è®¤æ„é€ 
 	Student();
-	//ÓĞ²Î¹¹Ôì
+	//æœ‰å‚æ„é€ 
 	Student(long id, string name, string pwd);
-	//²Ëµ¥½çÃæ
+	//èœå•ç•Œé¢
 	virtual void openMenu();
-	//ÉêÇëÔ¤Ô¼
+	//ç”³è¯·é¢„çº¦
 	void applyOrder();
-	//²é¿´×ÔÉíÔ¤Ô¼
+	//æŸ¥çœ‹è‡ªèº«é¢„çº¦
 	void showMyOrder();
 
-	//²é¿´ËùÓĞÔ¤Ô¼
+	//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
 	void showAllOrder();
-	//È¡ÏûÔ¤Ô¼
+	//å–æ¶ˆé¢„çº¦
 	void cancelOrder();
-	//Ñ§ÉúÑ§ºÅ
+	//å­¦ç”Ÿå­¦å·
 	int m_Id;
-	//Í¼Êé¹İĞÅÏ¢
+	//å›¾ä¹¦é¦†ä¿¡æ¯
 	vector<Library>vLib;
 };
