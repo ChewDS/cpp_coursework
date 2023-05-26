@@ -5,24 +5,24 @@
 #include <vector>
 using namespace std;
 
-//½ÌÊ¦ÀàÉè¼Æ
+//æ•™å¸ˆç±»è®¾è®¡
 class Teacher :public Identity
 {
 public:
-	//Ä¬ÈÏ¹¹Ôì
+	//é»˜è®¤æ„é€ 
 	Teacher();
-	//ÓĞ²Î¹¹Ôì
+	//æœ‰å‚æ„é€ 
 	Teacher(int empid, string name, string pwd);
 
-	//²Ëµ¥½çÃæ
+	//èœå•ç•Œé¢
 	virtual void openMenu();
 
-	//²é¿´ËùÓĞÔ¤Ô¼
+	//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
 	void showOrder();
 
-	//ÉóºËÔ¤Ô¼
+	//å®¡æ ¸é¢„çº¦
 	void validOrder();
 
-	//Ö°¹¤±àºÅ
+	//èŒå·¥ç¼–å·
 	int m_EmpId;
 };
