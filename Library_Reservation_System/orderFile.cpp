@@ -1,17 +1,17 @@
 #include"orderFile.h"
 
-//¹¹Ôìº¯Êý
+//æž„é€ å‡½æ•°
 OrderFile::OrderFile()
 {
 	ifstream ifs;
 	ifs.open(ORDER_FILE, ios::in);
 
-	string date;      //ÈÕÆÚ
-	string interval;  //Ê±¼ä¶Î
-	string stuId;     //Ñ§Éú±àºÅ
-	string stuName;   //Ñ§ÉúÐÕÃû
-	string roomId;    //Í¼Êé¹Ý±àºÅ
-	string status;    //Ô¤Ô¼×´Ì¬
+	string date;      //æ—¥æœŸ
+	string interval;  //æ—¶é—´æ®µ
+	string stuId;     //å­¦ç”Ÿç¼–å·
+	string stuName;   //å­¦ç”Ÿå§“å
+	string roomId;    //å›¾ä¹¦é¦†ç¼–å·
+	string status;    //é¢„çº¦çŠ¶æ€
 
 	this->m_Size = 0;
 
@@ -31,7 +31,7 @@ OrderFile::OrderFile()
 
 		map<string, string>m;
 
-		//stringÈÝÆ÷³ÉÔ±º¯Êý²éÕÒ
+		//stringå®¹å™¨æˆå‘˜å‡½æ•°æŸ¥æ‰¾
 		int position = date.find(":");//4
 		if (position != -1)
 		{
@@ -91,7 +91,7 @@ OrderFile::OrderFile()
 
 		}
 
-		//½«Ð¡ÈÝÆ÷·Åµ½´óÈÝÆ÷ÖÐ
+		//å°†å°å®¹å™¨æ”¾åˆ°å¤§å®¹å™¨ä¸­
 
 		this->m_orderData.insert(make_pair(this->m_Size, m));
 		this->m_Size++;
@@ -99,7 +99,7 @@ OrderFile::OrderFile()
 	ifs.close();
 
 
-	//²âÊÔ´ómapÈÝÆ÷
+	//æµ‹è¯•å¤§mapå®¹å™¨
 	/*for (map<int, map<string, string>>::iterator it = m_orderData.begin(); it != m_orderData.end(); it++)
 	{
 		cout << "key1 =  " << it->first << " value1 =  " << endl;
@@ -112,7 +112,7 @@ OrderFile::OrderFile()
 }
 
 
-//¸üÐÂÔ¤Ô¼¼ÇÂ¼
+//æ›´æ–°é¢„çº¦è®°å½•
 
 void OrderFile::updateOrder()
 {
