@@ -54,6 +54,7 @@ At the same time, this part utilizes the characteristics of polymorphism and inh
 The experimental design of the Library Reservation System basically meets the expected goals, realizing the expected appointment, review, adding personnel, storing data, modifying files and other functions, and basically completing the purpose of in-depth understanding and application of course content. Library Reservation System is a simple and fully functional back-end system, which is similar to the existing library reservation system and conforms to the actual logic function. Of course, there are still deficiencies in this experiment, including but not limited to no graphics or linkage with the front end, the overall process and functions are not perfect, and there is still room for improvement.
 
 Translation:
+
 Library Reservation System以主体部分Library Reservation模块为中心，下附Manager、Teacher、Student三个主要模块，结合功能模块OrderFile，实现用户增删、预约及审核、存储用户及预约记录等功能。
 
 Library Reservation
